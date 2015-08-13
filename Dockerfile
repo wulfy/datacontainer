@@ -6,5 +6,8 @@ RUN mkdir -p /data/docs \
 RUN mkdir -p /data/screens \
   && chmod 777 /data/screens
 
-VOLUME ["/data/docs","/data/screens"]
+RUN mkdir -p /data/logs \
+  && chmod 777 /data/logs
+
+VOLUME ["/data/docs","/data/screens","/data/logs"]
 #CMD ["echo", "Data container for graphite"]
